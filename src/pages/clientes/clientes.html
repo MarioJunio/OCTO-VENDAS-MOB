@@ -1,0 +1,63 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Meus clientes</ion-title>
+
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content no-padding>
+
+  <ion-fab bottom right>
+    <button ion-fab color="primary" (click)="addCliente()">
+      <ion-icon name="add-circle"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let cliente of clientes">
+
+      <ion-item (press)="mostrarDetalhes(cliente)" class="no-padding">
+        <h2 class="importante">
+          <ion-icon name="person"></ion-icon> {{cliente.nomeFantasia}}
+        </h2>
+
+        <span>
+          <ion-icon name="locate"></ion-icon> {{cliente.getEnderecoCompleto()}}
+        </span>
+
+        <p>
+          <ion-icon name="call"></ion-icon> {{cliente.fone1}}<span *ngIf="cliente.fone1 && cliente.fone2"> / </span> <span *ngIf="cliente.fone2">{{cliente.fone2}}</span>
+        </p>
+
+      </ion-item>
+
+      <ion-item-options side="left">
+        <button ion-button>
+          <ion-icon ios="ios-create" md="md-create"></ion-icon>
+          Editar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <!--<ion-card *ngFor="let cliente of clientes" no-padding>
+
+    <ion-card-header>
+      {{cliente.nomeFantasia}}
+    </ion-card-header>
+
+    <ion-card-content>
+      <h3>{{cliente.getEnderecoCompleto()}}</h3>
+      <h3 *ngIf='cliente.fone1'>{{cliente.fone1}}</h3>
+      <h3 *ngIf='cliente.fone2'>{{cliente.fone2}}</h3>
+    </ion-card-content>
+
+  </ion-card>-->
+
+</ion-content>

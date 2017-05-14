@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sincronização</ion-title>
+
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-divider>
+      Há novos dados para serem enviados
+    </ion-item-divider>
+
+    <ion-item>
+      <h6>Minhas vendas</h6>
+      <button ion-button [disabled]="btnMinhasVendas" color="{{btnMinhasVendas ? 'light' : 'secondary'}}" item-right style="font-size: 8pt;">Enviar</button>
+    </ion-item>
+
+    <ion-item>
+      <h6>Meus clientes</h6>
+      <button ion-button [disabled]="btnMeusClientes" color="{{btnMeusClientes ? 'light' : 'secondary'}}" item-right style="font-size: 8pt;">Enviar</button>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+    <ion-item-divider>
+      Existem dados não sincronizados
+    </ion-item-divider>
+
+    <ion-item>
+      <h6>Produtos</h6>
+      <button ion-button round [disabled]="btnProdutos" (click)="sincronizaProdutos()" color="{{btnProdutos ? 'light' : 'secondary'}}" item-right style="font-size: 8pt;">Sincronizar</button>
+    </ion-item>
+
+    <ion-item>
+      <h6>Clientes</h6>
+      <button ion-button round [disabled]="btnClientes" (click)="sincronizarClientes()" color="{{btnClientes ? 'light' : 'secondary'}}" item-right style="font-size: 8pt;">Sincronizar</button>
+    </ion-item>
+
+    <ion-item>
+      <h6>Formas de pagamento</h6>
+      <button ion-button round [disabled]="btnFormasPagamento" (click)="sincronizarFormasPagamento()" color="{{btnFormasPagamento ? 'light' : 'secondary'}}" item-right style="font-size: 8pt;">Sincronizar</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

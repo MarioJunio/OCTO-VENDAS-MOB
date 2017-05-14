@@ -1,0 +1,53 @@
+page-login {
+
+    .bar-header {
+        border: 0px !important;
+        border-bottom-color: transparent !important;
+        background-image: none !important;
+        border-bottom: none !important;
+    }
+
+    .content {
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .bg {
+        background-color: #3AAFFF;
+    }
+
+    .input-normal {
+        background-color: white;
+    }
+
+    .arredondar {
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    .pn-login-entrar {
+        position: relative;
+        top: 30px;
+    }
+
+    .top-gap {
+        margin-top: 20px;
+    }
+
+    .gap-btn-login {
+        margin-top: 50px;
+    }
+
+    .vertical-align-content {
+        margin-top: 10%;
+        
+    }
+
+    .text-white {
+        color: white;
+    }
+
+    .header-title {
+        text-shadow: 0px 1px 2px #555;
+    }
+
+}

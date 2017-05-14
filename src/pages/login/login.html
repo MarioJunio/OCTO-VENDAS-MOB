@@ -1,0 +1,36 @@
+<ion-header no-shadow class="bar-header">
+
+  <ion-navbar color="navBarColor">
+    <ion-title></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding text-center class="bg content" scroll="false">
+
+  <div class="vertical-align-content">
+
+    <h4 class="text-white header-title">Por favor, faça o login.</h4>
+
+    <br/>
+
+  <form [formGroup]="login" (ngSubmit)="entrar()">
+
+    <ion-item class="arredondar">
+      <ion-input formControlName="usuario" name="usuario" (blur)="validar()" placeholder="Usuário" type="text"></ion-input>
+    </ion-item>
+    <ion-label class="text-white" *ngIf="login.invalid">{{messageUsuario}}</ion-label>
+
+    <ion-item class="arredondar top-gap">
+      <ion-input formControlName="senha" name="senha" placeholder="Senha" type="password"></ion-input>
+    </ion-item>
+    <ion-label class="text-white" *ngIf="login.invalid">{{messageSenha}}</ion-label>
+
+    <ion-label class="text-white" *ngIf="message">{{message}}</ion-label>
+    <button [disabled]="login.invalid" class="gap-btn-login" ion-button full round block color="light">Entrar</button>
+
+  </form>
+
+  </div>
+
+</ion-content>

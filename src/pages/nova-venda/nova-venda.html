@@ -1,0 +1,189 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Nova venda</ion-title>
+
+    <ion-buttons end>
+
+        <button ion-button (click)="close()">
+            <ion-icon name="close"></ion-icon>
+        </button>
+
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <ion-item-divider>
+      Identifique o cliente
+    </ion-item-divider>
+
+    <ion-item>
+      <h6>Nenhum cliente selecionado</h6>
+      <button ion-button outline item-right (click)="buscarCliente();" style="font-size: 12pt;">
+        <ion-icon ios="ios-search-outline" md="md-search"></ion-icon>
+      </button>
+    </ion-item>
+
+    <ion-item-divider>
+      Qual forma de pagamento escolhida ?
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-select [selectOptions]="selectFormaPagamento" okText="Selecionar" cancelText="Cancelar" title="Formas de pagamento" placeholder="Selecione">
+        <ion-option>teste1</ion-option>
+        <ion-option>teste2</ion-option>
+        <ion-option>teste3</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item-divider>
+      <span style="position: relative; top: 5px;">
+        Itens da venda
+      </span>
+
+      <button (click)="abrirIncluirItem();" ion-button round outline end style="font-size: 7pt; position: relative; bottom: 3px; float: right;">Adicionar</button>
+    </ion-item-divider>
+
+      <ion-row>
+          <ion-col width-40 class="tb-col">Produto</ion-col>
+          <ion-col width-20 class="tb-col">Valor</ion-col>
+          <ion-col width-20 class="tb-col">Qtde</ion-col>
+          <ion-col width-20 class="tb-col">Sub total</ion-col>
+      </ion-row>
+
+      <ion-scroll scrollX="false" scrollY="true" style="width: 100%; height: 50%;">
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col width-40>Calabresa fina Friato</ion-col>
+            <ion-col width-20>R$ 4,43</ion-col>
+            <ion-col width-20>13</ion-col>
+            <ion-col width-20>R$ 57,59</ion-col>
+        </ion-row>
+
+      </ion-scroll>
+
+</ion-content>
+
+<ion-footer>
+    <button ion-button full (click)="finalizar();">Continuar</button>
+</ion-footer>

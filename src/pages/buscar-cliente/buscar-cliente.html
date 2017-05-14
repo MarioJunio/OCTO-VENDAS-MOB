@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-searchbar
+    placeholder="Buscar cliente"
+    [(ngModel)]="buscaCliente"
+    [showCancelButton]="true">
+  </ion-searchbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item-divider>
+      Resultados: 100
+  </ion-item-divider>
+
+  <ion-scroll scrollX="true" scrollY="true" style="width: 100%; height: 100%">
+
+    <ion-row>
+        <ion-col width-10 class="tb-col">#</ion-col>
+        <ion-col width-57 class="tb-col">Cliente</ion-col>
+        <ion-col width-33 class="tb-col">Telefone</ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col width-10>100</ion-col>
+        <ion-col width-57>Mario Junio Marques Martins</ion-col>
+        <ion-col width-33>(34)98700-5712</ion-col>
+    </ion-row>
+
+  </ion-scroll>
+
+</ion-content>
+
+<ion-footer>
+    <button ion-button full (click)="fechar();">Sair</button>
+</ion-footer>

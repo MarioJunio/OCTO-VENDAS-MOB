@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Editar parâmetro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label color="primary" floating>{{parametro.descricao}}</ion-label>
+    <ion-input type="text" *ngIf="parametro.tipo == appParametros.text" [(ngModel)]="valor"></ion-input>
+    <!--<ion-datetime *ngIf="parametro.tipo == libParametros.TIPO_DATA" displayFormat="DD/MM/YYYY" [(ngModel)]="valor"></ion-datetime>-->
+    <ion-input type="text" *ngIf="parametro.tipo == appParametros.data" [(ngModel)]="valor"></ion-input>
+  </ion-item>
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button full (click)="salvar()">Salvar</button>
+</ion-footer>

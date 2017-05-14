@@ -1,0 +1,59 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Incluir produto</ion-title>
+
+    <ion-buttons end>
+
+        <button ion-button (click)="close()">
+            <ion-icon name="close"></ion-icon>
+        </button>
+
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-item-divider>
+      Selecione o produto
+    </ion-item-divider>
+
+    <ion-item>
+      <h6>Nenhum produto selecionado</h6>
+      <button ion-button outline item-right (click)="selecionarProduto();" style="font-size: 12pt;">
+        <ion-icon ios="ios-search-outline" md="md-search"></ion-icon>
+      </button>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Quantidade</ion-label>
+      <ion-input placeholder=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Valor</ion-label>
+      <ion-input placeholder=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Acréscimo</ion-label>
+      <ion-input placeholder="%"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Desconto</ion-label>
+      <ion-input placeholder="%"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+    <button ion-button full>Salvar</button>
+</ion-footer>

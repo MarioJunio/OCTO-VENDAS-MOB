@@ -1,0 +1,72 @@
+<ion-header>
+
+  <ion-navbar>
+
+    <ion-title style="float: right;">Finalizar venda</ion-title>
+
+    <ion-buttons style="float: left;">
+
+        <button ion-button (click)="voltar()">
+            <ion-icon name="arrow-round-back"></ion-icon>
+        </button>
+
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-item-divider>
+    Cliente
+  </ion-item-divider>
+
+  <ion-item>
+    <h6>LANCHONETE TARANTELA</h6>
+  </ion-item>
+
+  <ion-item-divider>
+    Forma de pagamento
+  </ion-item-divider>
+
+  <ion-item>
+    <h6>A Vista</h6>
+  </ion-item>
+
+  <ion-item-divider>
+    Total
+  </ion-item-divider>
+
+  <ion-item>
+    <h6>R$ 1030,43</h6>
+  </ion-item>
+
+  <ion-item-divider>
+    Número de parcelas
+  </ion-item-divider>
+
+  <ion-item>
+    <ion-select [selectOptions]="selectNumeroParcelas" okText="Selecionar" cancelText="Cancelar" title="Parcelas disponíveis" placeholder="Selecione">
+        <ion-option>1</ion-option>
+        <ion-option>2</ion-option>
+        <ion-option>3</ion-option>
+        <ion-option>4</ion-option>
+        <ion-option>5</ion-option>
+        <ion-option>6</ion-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-item-divider>
+    Observações
+  </ion-item-divider>
+
+  <ion-item>
+   <ion-textarea rows="6" placeholder="digite aqui a observação desta venda"></ion-textarea>
+ </ion-item>
+
+</ion-content>
+
+<ion-footer>
+    <button ion-button full>Finalizar</button>
+</ion-footer>

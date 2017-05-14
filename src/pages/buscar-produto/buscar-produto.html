@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-searchbar
+    placeholder="Buscar produto"
+    [(ngModel)]="buscaProduto"
+    [showCancelButton]="true">
+  </ion-searchbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item-divider>
+      Resultados: 100
+  </ion-item-divider>
+
+  <ion-scroll scrollX="false" scrollY="true" style="width: 100%; height: 100%">
+
+    <ion-row>
+        <ion-col width-10 class="tb-col">#</ion-col>
+        <ion-col width-50 class="tb-col">Produto</ion-col>
+        <ion-col width-20 class="tb-col">Unidade</ion-col>
+        <ion-col width-20 class="tb-col">Valor</ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col width-10>343</ion-col>
+        <ion-col width-50>Calabresa fina Friato</ion-col>
+        <ion-col width-20>1 KG</ion-col>
+        <ion-col width-20>R$ 7,59</ion-col>
+    </ion-row>
+
+  </ion-scroll>
+
+</ion-content>
+
+<ion-footer>
+    <button ion-button full (click)="fechar();">Sair</button>
+</ion-footer>

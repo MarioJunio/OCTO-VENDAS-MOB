@@ -1,0 +1,37 @@
+<ion-menu [content]="content">
+
+  <ion-content>
+
+    <ion-toolbar>
+      <ion-title>Boa tarde Mario</ion-title>
+    </ion-toolbar>
+
+    <ion-list>
+
+      <button ion-item (click)="abrirPagina(inicio)" menuClose>
+        <ion-icon name="ios-home"></ion-icon>
+        Início
+      </button>
+
+      <button ion-item (click)="abrirPagina(meuPerfil)" menuClose>
+        <ion-icon name="ios-person"></ion-icon>
+        Meu Perfil
+      </button>
+
+      <button ion-item (click)="abrirPagina(sincronizarDados)" menuClose>
+        <ion-icon name="ios-pulse"></ion-icon>
+        Sincronizar
+      </button>
+
+      <button ion-item (click)="abrirPagina(configuracoes)" menuClose>
+        <ion-icon name="md-settings"></ion-icon>
+        Configurações
+      </button>
+
+    </ion-list>
+
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav #content [root]="rootPage"></ion-nav>
