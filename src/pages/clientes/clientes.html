@@ -7,22 +7,29 @@
       <ion-icon name="menu"></ion-icon>
     </button>
 
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addCliente()">
+        <ion-icon name="person-add"></ion-icon>
+      </button>
+    </ion-buttons>
+
   </ion-navbar>
 
 </ion-header>
 
 <ion-content no-padding>
 
-  <ion-fab bottom right>
+  <!--<ion-fab bottom right>
     <button ion-fab color="primary" (click)="addCliente()">
       <ion-icon name="add-circle"></ion-icon>
     </button>
-  </ion-fab>
+  </ion-fab>-->
 
   <ion-list>
     <ion-item-sliding *ngFor="let cliente of clientes">
 
       <ion-item (press)="mostrarDetalhes(cliente)" class="no-padding">
+
         <h2 class="importante">
           <ion-icon name="person"></ion-icon> {{cliente.nomeFantasia}}
         </h2>

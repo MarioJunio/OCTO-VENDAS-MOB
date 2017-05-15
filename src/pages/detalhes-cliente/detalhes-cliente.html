@@ -1,0 +1,102 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Detalhes do cliente</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <form [formGroup]="grpCliente">
+
+    <ion-item>
+      <ion-label color="primary" stacked>Nome</ion-label>
+      <ion-input formControlName="nome" placeholder="Nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Nome fantasia</ion-label>
+      <ion-input formControlName="nomeFantasia" placeholder="Nome fantasia"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>CNPJ</ion-label>
+      <ion-input formControlName="cnpj" placeholder="CNPJ"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Inscrição estadual</ion-label>
+      <ion-input formControlName="inscricaoEstadual" placeholder="inscricaoEstadual"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Razão social</ion-label>
+      <ion-input formControlName="razaoSocial" placeholder="Razão social"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>CPF</ion-label>
+      <ion-input formControlName="cpf" placeholder="CPF"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>RG</ion-label>
+      <ion-input formControlName="rg" placeholder="RG"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Email</ion-label>
+      <ion-input formControlName="email" placeholder="Email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>UF</ion-label>
+      <ion-select formControlName="uf" placeholder="Estado">
+        <ion-option>Teste</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item (click)="buscarCidade()" detail-push>
+      <b>Cidade:</b> {{cliente.cidade.nome ? cliente.cidade.nome : 'Selecione a cidade'}}
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>CEP</ion-label>
+      <ion-input formControlName="cep" placeholder="CEP"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Bairro</ion-label>
+      <ion-input formControlName="bairro" placeholder="Bairro"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Logradouro</ion-label>
+      <ion-input formControlName="logradouro" placeholder="Logradouro"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Número</ion-label>
+      <ion-input formControlName="numero" placeholder="Número"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Complemento</ion-label>
+      <ion-input formControlName="complemento" placeholder="Complemento"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Fone 1</ion-label>
+      <ion-input formControlName="fone1" placeholder="Fone 1"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Fone 2</ion-label>
+      <ion-input formControlName="fone2" placeholder="Fone 2"></ion-input>
+    </ion-item>
+
+  </form>
+
+</ion-content>

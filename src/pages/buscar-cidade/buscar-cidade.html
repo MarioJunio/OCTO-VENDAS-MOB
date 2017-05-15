@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-searchbar
+    placeholder="Digite o nome da cidade..."
+    [(ngModel)]="nomeCidade"
+    [showCancelButton]="true">
+  </ion-searchbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item-divider>
+      Resultados: 2
+  </ion-item-divider>
+
+  <ion-scroll scrollX="true" scrollY="true" style="width: 100%; height: 100%">
+
+    <ion-list>
+      <ion-item>Monte carmelo</ion-item>
+      <ion-item>Uberlândia</ion-item>
+    </ion-list>
+
+  </ion-scroll>
+
+</ion-content>
+
+<ion-footer>
+    <button ion-button full (click)="fechar()">Sair</button>
+</ion-footer>

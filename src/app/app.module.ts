@@ -17,6 +17,8 @@ import { ConfiguracoesPage } from '../pages/configuracoes/configuracoes';
 import { EditarParametroPage } from '../pages/configuracoes/editar-parametro/editar-parametro';
 import { IntroducaoPage } from '../pages/introducao/introducao';
 import { LoginPage } from '../pages/login/login';
+import { DetalhesClientePage } from '../pages/detalhes-cliente/detalhes-cliente'
+import { BuscarCidadePage } from '../pages/buscar-cidade/buscar-cidade';
 
 // DAO - Data Access Object
 import { ProdutoDAO } from '../dao/produto-dao';
@@ -61,7 +63,9 @@ import { JsonParser } from '../lib/json-parser';
     ConfiguracoesPage,
     EditarParametroPage,
     IntroducaoPage,
-    LoginPage
+    LoginPage,
+    DetalhesClientePage,
+    BuscarCidadePage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
@@ -89,7 +93,9 @@ import { JsonParser } from '../lib/json-parser';
     ConfiguracoesPage,
     EditarParametroPage,
     IntroducaoPage,
-    LoginPage
+    LoginPage,
+    DetalhesClientePage,
+    BuscarCidadePage
   ],
   providers: [ProdutoDAO, MarcaDAO, CategoriaDAO, PrateleiraDAO, ParametroSistemaDao, VendedorDAO, ClienteDAO, CidadeDAO, EstadoDAO, FormaPagamentoDAO, LoginWebService, ProdutosWebService, ClienteWS, FormasPagamentoWS, VendedorService, ClienteService, FormaPagamentoService, Util, Globals, JsonParser]
 })

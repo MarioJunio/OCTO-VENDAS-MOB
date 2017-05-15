@@ -5,6 +5,7 @@ import { ClienteDAO } from '../../dao/cliente-dao';
 import { Cliente } from '../../model/cliente';
 import { Cidade } from '../../model/cidade';
 import { Estado } from '../../model/estado';
+import { DetalhesClientePage } from '../detalhes-cliente/detalhes-cliente';
 
 @Component({
   selector: 'page-clientes',
@@ -77,11 +78,16 @@ export class ClientesPage {
   }
 
   public mostrarDetalhes(cliente: any) {
-    //TODO: chamar tela para editar o cliente
+    
+    this.navCtrl.push(DetalhesClientePage, {
+      clienteSelecionado: cliente
+    });
+
   }
 
   public addCliente() {
     //TODO: adicionar novo cliente
+    console.log('Chamou add cliente');
   }
 
 }
